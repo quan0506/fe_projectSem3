@@ -1,0 +1,13 @@
+.slider-container{
+    margin:50px 200px ;
+}
+
+.trend-img{
+    width: 200px;
+    height: 200px;
+}
+.trend-card a{
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}

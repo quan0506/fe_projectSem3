@@ -25,7 +25,8 @@
                                 element={requiredLogin ? <Component /> : <Navigate to="/login" />}
                             />  
                             ))}
-                            </Route>
+                </Route>
+                
             </Routes>
         )
 }

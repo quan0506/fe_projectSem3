@@ -1,4 +1,5 @@
-import Login from '../pages/login/Login'
+import Login from '../pages/LoginSignup'
+
 const publicRoutes = {
     login: {
         path: '/login',
