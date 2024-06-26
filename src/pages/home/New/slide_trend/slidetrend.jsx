@@ -1,9 +1,9 @@
 import Slider from "react-slick";
 import './slidetrend.css';
-import trendring from "../../components/assets/trend-ring.jpg";
-import trendnecklace from "../../components/assets/trend-Necklace.jpg";
-import trendbracelets from "../../components/assets/trend-bracelets.jpg"
-import trendearrings from "../../components/assets/trend-earrings.jpg";
+import trendring from "../../../../../public/assets/trend-ring.jpg";
+import trendnecklace from "../../../../../public/assets/trend-Necklace.jpg";
+import trendbracelets from "../../../../../public/assets/trend-bracelets.jpg"
+import trendearrings from "../../../../../public/assets/trend-earrings.jpg";
 import {Link} from 'react-router-dom';
 
 function PauseOnHover() {

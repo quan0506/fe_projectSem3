@@ -1,8 +1,10 @@
 import { Outlet  } from "react-router-dom";
+import Header from "../components/header/header.jsx";
 const PrivateLayout = () => {
   return (
     <div >
-          <Outlet />
+      <Header />
+      <Outlet />
     </div>
   );
 };

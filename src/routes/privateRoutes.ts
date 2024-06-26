@@ -1,8 +1,8 @@
-import Home from '../pages/Home';
-import Shop from '../pages/Shop';
-import Product from '../pages/Product';
-import AboutContact from '../pages/AboutContact';
-import Cart from '../pages/Cart';
+import Home from '../pages/home/Home'
+import Shop from '../pages/shop/Shop';
+import Product from '../pages/product/Product';
+import AboutContact from '../pages/AboutContact/AboutContact';
+import Cart from '../pages/Cart/Cart';
 
 const privateRoutes = {
     home :{

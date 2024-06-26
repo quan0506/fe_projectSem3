@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import Header from "../components/header/header";
-import Footer from "../components/footer/footer";
-import Pagination from "../components/pagination/pagination";
-import Filter from "../components/filter/filter"
+import Pagination from "./New/pagination/pagination.jsx";
+import Filter from "./New/filter/filter.jsx"
 
 const items = [...Array(100).keys()]; 
 
@@ -20,7 +18,6 @@ const Shop = () => {
 
   return (
     <div>
-      <Header/>
       <Filter/>
       <h1>Product List</h1>
       <ul>
@@ -29,7 +26,6 @@ const Shop = () => {
         ))}
       </ul>
       <Pagination pageCount={pageCount} onPageChange={handlePageClick} />
-      <Footer/>
     </div>
   );
 };

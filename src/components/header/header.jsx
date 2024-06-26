@@ -1,5 +1,5 @@
 import "./header.css"; 
-import logo from "../../components/assets/logoprjsem3.png";
+import logo from "../../../public/assets/logoprjsem3.png";
 import 'boxicons';
 import {Link} from "react-router-dom"
 

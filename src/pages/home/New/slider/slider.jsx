@@ -1,9 +1,9 @@
 // import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import banner2 from "../../components/assets/banner2.png"
-import "./slider.css"; 
+import banner2 from "../../../../../public/assets/banner2.png"
+import "./slider.css";
 
 function SimpleSlider() {
   const settings = {
