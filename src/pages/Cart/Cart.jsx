@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import './cartitems.css';
+import './cart.css';
 
 const Cart= () => {
   const [cart, setCart] = useState([
@@ -8,6 +8,13 @@ const Cart= () => {
       name: 'Tai nghe có dây 3,5mm 4d Bass Dây tốc cao Dual Est Reo Độ t...',
       price: 22000,
       quantity: 2,
+      image: 'path-to-image',
+    },
+    {
+      id: 2,
+      name: 'clgttttt',
+      price: 30000,
+      quantity: 5,
       image: 'path-to-image',
     },
   ]);

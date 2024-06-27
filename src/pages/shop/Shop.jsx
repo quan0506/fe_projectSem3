@@ -2,11 +2,11 @@ import { useState } from 'react';
 import Pagination from "./New/pagination/pagination.jsx";
 import Filter from "./New/filter/filter.jsx"
 
-const items = [...Array(100).keys()]; 
+const items = [...Array(23).keys()]; 
 
 const Shop = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 10;
+  const itemsPerPage = 5;
 
   const handlePageClick = (data) => {
     setCurrentPage(data.selected);

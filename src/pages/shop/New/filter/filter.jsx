@@ -3,7 +3,7 @@ import './filter.css';
 
 const Filter = () => {
     const [selectedFilters, setSelectedFilters] = useState({});
-    const [sortOption, setSortOption] = useState('New Product');
+    // const [sortOption, setSortOption] = useState('New Product');
 
     const filters = {
         'Brand': ['Brand A', 'Brand B', 'Brand C'],
@@ -11,7 +11,7 @@ const Filter = () => {
         'Collection': ['Collection 1', 'Collection 2', 'Collection 3'],
     };
 
-    const sortOptions = ['New Product', 'Price increases', 'Price decreases'];
+    // const sortOptions = ['New Product', 'Price increases', 'Price decreases'];
 
     const handleFilterChange = (category, value) => {
         setSelectedFilters((prev) => {
@@ -30,9 +30,9 @@ const Filter = () => {
         });
     };
 
-    const handleSortChange = (option) => {
-        setSortOption(option);
-    };
+    // const handleSortChange = (option) => {
+    //     setSortOption(option);
+    // };
 
     return (
         <div className="filter-container">
@@ -61,14 +61,14 @@ const Filter = () => {
                     </div>
                 ))}
             </div>
-            <div className="sort">
+            {/* <div className="sort">
                 <button className="dropbtn">{sortOption}</button>
                 <div className="dropdown-content">
                     {sortOptions.map((option) => (
                         <a key={option} onClick={(e) => { e.preventDefault(); handleSortChange(option); }}>{option}</a>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };
