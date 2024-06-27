@@ -36,7 +36,7 @@ const Header = () => {
       <Link className="nav-item" to='/'>HOME</Link>
         {/* <a href="#" className="nav-item">CATEGORY</a> */}
         <Link className="nav-item" to='/shop'>SHOP</Link>
-        <Link className="nav-item" to='/blog'>BLOG</Link>
+        {/* <Link className="nav-item" to='/blog'>BLOG</Link> */}
         <Link className="nav-item" to='/aboutcontact'>ABOUT & CONTACT US</Link>
         {/* <Link href="#" className="nav-item">CONTACT</Link> */}
         <div className="nav-search">
