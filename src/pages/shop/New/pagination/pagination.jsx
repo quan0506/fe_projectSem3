@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
 import './pagination.css';

@@ -1,43 +1,58 @@
 // import React from 'react';
+import { Container, Row, Col, ListGroup } from 'react-bootstrap';
 import './footer.css';
-import 'boxicons'
+import 'boxicons';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-    return (
-        <footer className="footer">
-            <div className="footer-section">
-                <h3>Company</h3>
-                <a href="#about">About</a>
-                <a href="#features">Features</a>
-                <a href="#works">Works</a>
-                <a href="#career">Career</a>
+  return (
+    <footer className="footer">
+      <Container>
+        <Row className="justify-content-center mb-4">
+          <Col className="text-center">
+            <p>Get connected with us on social networks:</p>
+            <div className="social-icons">
+              <Link to='/shop'><box-icon type='logo' name='facebook'></box-icon></Link>
+              <Link to='#' ><box-icon name='twitter' type='logo' ></box-icon></Link>
+              <Link to='#' ><box-icon name='google' type='logo' ></box-icon></Link>
+              <Link to='#' ><box-icon name='instagram' type='logo' ></box-icon></Link>
+              <Link to='#' ><box-icon name='linkedin-square' type='logo' ></box-icon></Link>
+              <Link to='#' ><box-icon name='github' type='logo' ></box-icon></Link>
             </div>
-            <div className="footer-section">
-                <h3>Help</h3>
-                <a href="#support">Customer Support</a>
-                <a href="#delivery">Delivery Details</a>
-                <a href="#terms">Terms & Conditions</a>
-                <a href="#privacy">Privacy Policy</a>
-            </div>
-            
-            <div className="footer-section newsletter">
-                <h3>Subscribe to Newsletter</h3>
-                <input type="email" placeholder="Enter email address" />
-                <button>Join</button>
-            </div>
-            <div className="footer-contact">
-                <p>Call Us: 1800 80 80 88</p>
-                <p>Email Us: info@rareblocks.xyz</p>
-                <div className="social-media">
-                    <a href="#twitter"><box-icon name='twitter' type='logo' ></box-icon></a>
-                    <a href="#facebook"><box-icon name='facebook' type='logo' ></box-icon></a>
-                    <a href="#instagram"><box-icon type='logo' name='instagram-alt'></box-icon></a>
-                    <a href="#github"><box-icon name='github' type='logo' ></box-icon></a>
-                </div>
-            </div>
-            <p className="copyright">© Copyright 2021, All Rights Reserved</p>
-        </footer>
-    );
+          </Col>
+        </Row>
+        <Row className="footer-content">
+          <Col md={3}>
+            <h5 className="title">COMPANY NAME</h5>
+            <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </Col>
+          <Col md={3}>
+            <h5 className="title">ABOUT US</h5>
+            <ListGroup variant="flush">
+              <ListGroup.Item as={Link} to='/'>Home</ListGroup.Item>
+              <ListGroup.Item>Shop</ListGroup.Item>
+              <ListGroup.Item>Category</ListGroup.Item>
+              <ListGroup.Item as={Link} to='/aboutcontact'>Contact Us</ListGroup.Item>
+            </ListGroup>
+          </Col>
+          <Col md={3}>
+            <h5 className="title">CONTACT US</h5>
+            <ListGroup variant="flush">
+              <ListGroup.Item><box-icon name='home' type='solid' ></box-icon> New York, NY 10012, US</ListGroup.Item>
+              <ListGroup.Item><box-icon name='envelope' type='solid' ></box-icon> info@example.com</ListGroup.Item>
+              <ListGroup.Item><box-icon name='phone-call' ></box-icon> + 01 234 567 88</ListGroup.Item>
+              <ListGroup.Item><box-icon type='solid' name='phone-incoming'></box-icon> + 01 234 567 89</ListGroup.Item>
+            </ListGroup>
+          </Col>
+        </Row>
+        <Row className='footer-bottom'>
+          <Col className="text-center-bottom py-3">
+            <p>&copy; 2024 Copyright by Team2.T2301E</p>
+          </Col>
+        </Row>
+      </Container>
+    </footer>
+  );
 }
 
 export default Footer;

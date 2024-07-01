@@ -1,51 +1,70 @@
-import "./header.css"; 
-import logo from "../../../public/assets/logoprjsem3.png";
-import 'boxicons';
-import {Link} from "react-router-dom"
+import {Stack, Container, Form, Nav, Navbar, NavDropdown} from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './header.css';
+import { Link } from 'react-router-dom';
 
-
-const Header = () => {
+function Header() {
   return (
-    <header className="header">
-      <div className="header-top">
-        <div className="header-top-left">
-          <div className="header-item">
-            <i className="fas fa-map-marker-alt"></i>  Mon - Sat 9.00 - 18.00 
-          </div>
-          <div className="header-item">
-            <box-icon name='headphone' ></box-icon>
-            <i className="fas fa-phone-alt"></i> 1800 80 80 88
-          </div>
+    <div className='header'>
+      <Stack direction="horizontal" gap={3} className='support-header'>
+        <div className="p-2">
+          <box-icon name='calendar' type='solid' ></box-icon>
+          9.00 AM - 9.00 PM
         </div>
-        <Link className="header-logo" to='/'>
-          <img src={logo} alt="Logo" /> 
-          <p>YGJ</p>
+        <div className="p-2">
+          <box-icon name='headphone' ></box-icon>
+          1800 80 80 88
+        </div>
+        <Link className="p-2 ms-auto" to='/cart'>
+          <box-icon name='cart' ></box-icon>
+          My Cart
         </Link>
-        <div className="header-top-right">
-          <div className="header-item">
-            <Link to='/login'> <box-icon name='user'></box-icon></Link>
-            
-            {/* <i className="fas fa-user"></i> My Account */}
-          </div>
-          <div className="header-item">
-            <Link className="nav-item" to='/cart' ><box-icon type='solid' name='cart'></box-icon></Link><span className="cart-count">0</span>
-          </div>
-        </div>
-      </div>
-      <nav className="header-nav">
-      <Link className="nav-item" to='/'>HOME</Link>
-        {/* <a href="#" className="nav-item">CATEGORY</a> */}
-        <Link className="nav-item" to='/shop'>SHOP</Link>
-        {/* <Link className="nav-item" to='/blog'>BLOG</Link> */}
-        <Link className="nav-item" to='/aboutcontact'>ABOUT & CONTACT US</Link>
-        {/* <Link href="#" className="nav-item">CONTACT</Link> */}
-        <div className="nav-search">
-          <input type="text" placeholder="Search..." />
-          <button type="button"><box-icon name='search' ></box-icon></button>
-        </div>
-      </nav>
-    </header>
+        {/* <div className="vr" /> */}
+        <Link className="p-2" to='/login'>
+          <box-icon name='user-circle' ></box-icon>
+          My Account
+        </Link>
+      </Stack>
+
+      <Navbar expand="lg" className="bg-body-tertiary">
+        <Container fluid className='container-header'>
+          <Navbar.Brand to="#" className='logo'>
+            {/* <img src="../../../public/assets/logoprjsem3.png" className='logo-img'/>  */}
+            <p className='logo-brand'>YGJ</p>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: '100px' }}
+              navbarScroll
+            >
+              <Nav.Link as={Link} to='/' className="custom-link">Home</Nav.Link>
+              <Nav.Link as={Link} to='/shop' className="custom-link">Shop</Nav.Link>
+              <NavDropdown as={Link} title="Category" id="navbarScrollingDropdown" className="custom-link">
+                <NavDropdown.Item as={Link} to="#" className="custom-link">Ring</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="#" className="custom-link">Bracelets</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="#" className="custom-link">Necklace</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="#" className="custom-link">Earrings</NavDropdown.Item>
+                {/* <NavDropdown.Divider /> */}
+              </NavDropdown>
+              <Nav.Link as={Link} to='/aboutcontact' className="custom-link">About & Contact Us</Nav.Link>
+            </Nav>
+            <Form className="d-flex search-form">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="search-input"
+                aria-label="Search"
+              />
+              <box-icon name='search' class="search-icon"></box-icon>
+            </Form>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
   );
-};
+}
 
 export default Header;
+

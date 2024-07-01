@@ -18,7 +18,7 @@ const Shop = () => {
 
   return (
     <div>
-      <Filter/>
+      <Filter/> 
       <h1>Product List</h1>
       <ul>
         {currentItems.map((item, index) => (

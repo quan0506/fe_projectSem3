@@ -1,15 +1,18 @@
-// import React from 'react'
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import {Link} from 'react-router-dom';
 import './breadcrum.css'
-import 'boxicons'
 
-const Breadcrum = () => {
-    // const {product} = props;
+
+function Breadcrums() {
   return (
-    <div className='breadcrum'>
-        HOME <box-icon name='chevron-right'></box-icon> SHOP <box-icon name='chevron-right'></box-icon> RING <box-icon name='chevron-right'></box-icon> XNXX 
-    </div>
-
-  )
+    <Breadcrumb>
+      <Breadcrumb.Item as={Link} to='/'>Home</Breadcrumb.Item>
+      <Breadcrumb.Item as={Link} to='/shop'>
+        Library
+      </Breadcrumb.Item>
+      <Breadcrumb.Item active>Data</Breadcrumb.Item>
+    </Breadcrumb>
+  );
 }
 
-export default Breadcrum;
+export default Breadcrums;

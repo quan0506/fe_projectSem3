@@ -1,80 +1,31 @@
 *{
   margin: 0;
   padding : 0;
-   box-sizing: border-box; 
+  box-sizing: border-box; 
   font-family: Outfit,sans-serif;
 }
 
 .bestseller {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .bestseller-title {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .bestseller-products {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .product-card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 22%;
-    margin: 10px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
-  .product-card img {
-    max-width: 100%;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
-  }
-  
-  .product-info {
-    text-align: left;
-  }
-  
-  .product-name {
-    font-size: 1em;
-    font-weight: bold;
-    margin: 5px 0;
-  }
-  
-  .product-price {
-    color: red;
-    font-size: 1.2em;
-    margin: 5px 0;
-  }
-  
-  .product-reviews {
-    font-size: 0.9em;
-    color: #555;
-    margin: 5px 0;
-  }
-  
-  .product-rating {
-    color: gold;
-  }
-  
-  .bestseller-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-  
-  .bestseller-button:hover {
-    background: #0056b3;
-  }
-  
+  text-align: center;
+  margin: 20px ;
+}
+
+.bestseller-title {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.bestseller-products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card-button{
+  margin: 0 15px;
+}
+
+.bestseller-button {
+  display: inline-block;
+  margin-top: 20px;
+}

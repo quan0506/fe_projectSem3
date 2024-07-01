@@ -1,6 +1,7 @@
 // src/ProductDetail.js
 import  { useState } from 'react';
 import './productDetail.css';
+import {Link} from "react-router-dom";
 
 const ProductDetail = () => {
   const [size, setSize] = useState('Small');
@@ -53,8 +54,8 @@ const ProductDetail = () => {
           </label>
         </div>
         <div className="actions">
-          <button className="buy-now">BUY NOW</button>
-          <button className="add-to-cart">ADD TO CART</button>
+          <Link to='/checkout' className="buy-now">BUY NOW</Link>
+          <Link to='/cart' className="add-to-cart">ADD TO CART</Link>
         </div>
       </div>
     </div>

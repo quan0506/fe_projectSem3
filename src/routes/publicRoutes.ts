@@ -1,9 +1,16 @@
-import Login from '../pages/Login/LoginSignup'
+import { register } from 'module';
+import Login from '../pages/Login/Login';
+import Register from '../pages/register/register';
 
 const publicRoutes = {
     login: {
         path: '/login',
         component: Login,
+        requiredLogin: false,
+    },
+    register: {
+        path: '/register',
+        component: Register,
         requiredLogin: false,
     },
 

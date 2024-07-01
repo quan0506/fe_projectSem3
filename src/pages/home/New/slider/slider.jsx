@@ -1,49 +1,56 @@
-// import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import banner2 from "../../../../../public/assets/banner2.png"
-import "./slider.css";
+import { useState } from 'react';
+import { Carousel, Button } from 'react-bootstrap';
+import banner2 from "../../../../../public/assets/banner2.png";
+import { Link } from 'react-router-dom';
+import './slider.css';
 
-function SimpleSlider() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500, 
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true, 
-    autoplaySpeed: 3000, 
-    appendDots: dots => (
-      <div style={{ 
-        position: 'absolute', 
-        bottom: '10px', 
-        left: '50%', 
-        transform: 'translateX(-50%)' 
-      }}>
-        <ul style={{ margin: "0px" }}>{dots}</ul>
-      </div>
-    )
+function HomeSlider() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
   };
 
   return (
-    <div className="slider-container">
-      <Slider {...settings}>
-        {/* <div>
-          <img src={banner1} alt="Banner 1" />
-        </div> */}
-        <div>
-          <img src={banner2} alt="Banner 2" />
-        </div>
-        <div>
-          <img src={banner2} alt="Banner 3" />
-        </div>
-        <div>
-          <img src={banner2} alt="Banner 4" />
-        </div>
-      </Slider>
-    </div>
+    <Carousel activeIndex={index} onSelect={handleSelect} interval={3000} className='home-slider'>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner2}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <Button as={Link} to='/shop' className="slider-button">Read more</Button>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner2}
+          alt="Second slide"
+        />
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Button as={Link} to='/shop' className="slider-button">Read more</Button>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner2}
+          alt="Third slide"
+        />
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <Button as={Link} to='/shop' className="slider-button">Read more</Button>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   );
 }
 
-export default SimpleSlider;
+export default HomeSlider;
